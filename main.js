@@ -74,3 +74,40 @@ const setNextQuestion = () => {
     showQuestion(questions[currentQuestionIndex]);
     
 }
+
+const setStatusClass = (element, isCorrect) => {
+    element.classList.remove("correct", "wrong");
+    
+    if (isCorrect) {
+        element.classList.add("correct");
+        
+    } else {
+        element.classList.add("wrong");
+    }
+    
+}
+
+
+const selectAnswer = (isCorrect) => {
+    const buttons = answerButtonsElement.querySelectorAll("button");
+    
+    buttons.forEach((button) => {
+        const key = getKeyByValue(questions[currentQuestionIndex].answers, button.innerText);
+
+        if (isCorrect && key === questions[currentQuestionIndex].correct_answer) {
+            setStatusClass(button, true);
+            
+
+        } else if (!isCorrect && key === questions[currentQuestionIndex].correct_answer) {
+            setStatusClass(button, true);
+        } else {
+            setStatusClass(button, false);
+        }
+    });
+    
+    if (questions.length > currentQuestionIndex + 1) {
+        showNextButton();
+    } else {
+        showNote()
+    }
+}
