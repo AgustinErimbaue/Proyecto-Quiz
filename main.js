@@ -111,3 +111,25 @@ const selectAnswer = (isCorrect) => {
         showNote()
     }
 }
+
+const removeAnswerColors = () => {
+    const buttons = answerButtonsElement.querySelectorAll("button");
+    buttons.forEach((button) => {
+        button.classList.remove("correct", "wrong");
+    });
+}
+
+const showNextButton = () => {
+    nextButton.classList.remove("hide");
+}
+
+const hideNextButton = () => {
+    nextButton.classList.add("hide");
+}
+
+const showNote = () =>{
+    punctuation.innerHTML = `<h3> ${note}/10 </h3>`
+    noteContainer.classList.remove('hide')
+    questionContainerElement.classList.add("hide")
+    showRestartButton();
+}
