@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Proyecto Quiz</title>
+    <link rel="shortcut icon" href="OIG4.jpeg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="home-vista">
+        <h1>Welcome to the quiz!</h1>
+
+        <button id="take-the-Quiz">Take the Quiz</button>
+    </div>
+
+    <div id="question-container" class="hide">
+        <div id="question"></div>
+
+        <div id="answer-buttons">
+        </div>
+
+        <div id="controls">
+            <button id="next-btn" class="hide">Next</button>
+        </div>
+    </div>
+
+    <div class="note-container hide">
+        <div class="punctuation">
+            <h3>Punctuation</h3>
+        </div>
+
+        <div id="note-punctuation">
+        </div>
+
+        <div class="btn-reset">
+            <button id="restart-btn" class="hide">Restart</button>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
