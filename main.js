@@ -28,3 +28,49 @@ const startGame = () => {
     currentQuestionIndex = 0;
     setNextQuestion();
 }
+
+const showQuestion = (question) => {
+
+    questionElement.innerText = question.question;
+
+    Object.keys(question.answers).forEach((key) => {
+
+        const answerText = question.answers[key];
+        if (answerText && answerText.trim() !== "") {
+            const button = document.createElement("button");
+            button.innerText = answerText;
+
+            Object.keys(question.correct_answers).forEach(answerValue => {
+
+                if (question.correct_answers[answerValue] === 'true') {
+                    question.correct_answer = answerValue.substring(0, 8)
+                }
+            })
+            
+            isCorrect = key === question.correct_answer;
+
+            
+            button.addEventListener("click", () => {selectAnswer(isCorrect)
+            if ( isCorrect = key === question.correct_answer) {
+                note ++
+            }
+            console.log(note);
+            });
+            answerButtonsElement.appendChild(button);
+        }
+    });
+}
+
+const resetState = () => {
+    nextButton.classList.add("hide");
+    restartButton.classList.add("hide");
+    answerButtonsElement.innerHTML = "";
+    
+}
+
+const setNextQuestion = () => {
+    resetState();
+    removeAnswerColors();
+    showQuestion(questions[currentQuestionIndex]);
+    
+}
