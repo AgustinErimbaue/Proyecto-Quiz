@@ -29,6 +29,8 @@ const startGame = () => {
     setNextQuestion();
 }
 
+
+
 const showQuestion = (question) => {
 
     questionElement.innerText = question.question;
@@ -60,6 +62,7 @@ const showQuestion = (question) => {
         }
     });
 }
+
 
 const resetState = () => {
     nextButton.classList.add("hide");
@@ -133,3 +136,31 @@ const showNote = () =>{
     questionContainerElement.classList.add("hide")
     showRestartButton();
 }
+
+const showRestartButton = () => {
+    restartButton.classList.remove("hide");
+}
+
+const hideRestartButton = () => {
+    restartButton.classList.add("hide");
+}
+
+// Función de utilidad
+const getKeyByValue = (object, value) => {
+    return Object.keys(object).find((key) => object[key] === value);
+}
+
+//manejo de eventos
+takeTheQuizBtn.addEventListener("click", startGame);
+restartButton.addEventListener("click", () => {
+    questionContainerElement.classList.add("hide");
+    homeVista.classList.remove("hide");
+     hideRestartButton();
+    removeAnswerColors();
+    noteContainer.classList.add('hide')
+    count=0
+});
+nextButton.addEventListener("click", () => {
+    currentQuestionIndex++;
+    setNextQuestion();
+});
