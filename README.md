@@ -37,7 +37,4 @@ Las contribuciones son bienvenidas. Si deseas contribuir a este proyecto, por fa
 5. Sube tu rama (`git push origin feature/nueva-funcionalidad`).
 6. Abre una solicitud de extracción (Pull Request).
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.md.
 
