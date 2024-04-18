@@ -1,105 +1,166 @@
-/* Estilos generales */
-body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
 }
 
 .hide {
     display: none;
 }
 
-/* Estilos para el contenedor principal */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    background-image: url("43265184-ilustración-azul-túnel-de-datos-estilo-abstracto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hide {
+    display: none;
+}
+
 #home-vista {
     text-align: center;
     margin-top: 100px;
-    background-image: url("OIG4.jpeg");
-    color: #426ad0;
-    font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-    background-size: cover;
-    background-position: center;
     padding: 50px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
-#question-container,
-.note-container {
-    text-align: center;
-    margin-top: 50px;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+#home-vista h1 {
+    font-size: 48px;
+    color: #ff0000;
+    text-shadow: 2px 2px 4px #000;
 }
 
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+#take-the-Quiz {
+    background-color: #ff0000;
+    color: #fff;
+    border: 2px solid #ff0000;
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#take-the-Quiz:hover {
+    background-color: #000;
+    color: #ff0000;
 }
 
 button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 18px;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 20px;
     cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s ease;
+}
 
 button:hover {
-    /* Escalar ligeramente el botón al pasar el cursor */
-    transform: scale(1.05);
+    background-color: #ff0000;
+    color: #000;
 }
-}
+
 button.correct {
-    background-color: #2ecc71;
-    color: white;
+    background-color: #00ff00;
+    border-color: #00ff00;
 }
 
 button.wrong {
-    background-color: #e74c3c;
-  
-    color: white;
+    background-color: #ff0000;
+    border-color: #ff0000;
 }
 
-/* Estilos específicos para el contenedor de puntuación */
-.note-container {
+#question-container {
     text-align: center;
     margin-top: 50px;
-    background-color: #3498db;
-    /* Azul */
+    background-image: url("43265184-ilustración-azul-túnel-de-datos-estilo-abstracto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
+}
+
+#question {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.note-container {
+    background-image: url("43265184-ilustración-azul-túnel-de-datos-estilo-abstracto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+    font-size: 44px;
 }
 
 .punctuation h3 {
     margin-bottom: 20px;
-    color: white;
-    /* Texto blanco */
+    color: #ff0000;
+    font-size: 44px;
 }
 
 .btn-reset button {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 15px 30px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    background-color: #f39c12;
-    color: white;
+    background-color: #ff0000;
+    color: #fff;
+}
+
+button.explode {
+    animation: explode 1.9s ease forwards;
+}
+
+
+#contenedor {
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+}
+
+#myChart {
+    width: 100%;
+    height: auto;
 }
