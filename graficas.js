@@ -21,7 +21,7 @@ const config = {
                     color: 'rgba(255, 0, 0, 0.3)',
                 },
                 ticks: {
-                    color: 'white', 
+                    color: 'white',
                 }
             },
             y: {
@@ -46,5 +46,4 @@ const config = {
         }
     }
 };
-
 const myChart = new Chart('myChart', config);
