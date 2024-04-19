@@ -11,7 +11,6 @@ const puntuacionTabla = document.getElementById('contenedor');
 
 let questions = [];
 const punctuations = JSON.parse(localStorage.getItem("punctuation")) || [];
-
 let currentQuestionIndex = 0;
 let note = 0;
 let notePunctuation = localStorage.getItem("punctuation");
