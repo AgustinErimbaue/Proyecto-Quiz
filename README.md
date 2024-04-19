@@ -1,6 +1,9 @@
 # Proyecto Quiz
 
 Este es un proyecto de un quiz interactivo desarrollado utilizando HTML, CSS y JavaScript. El quiz obtiene preguntas de una API externa y permite a los usuarios responderlas para evaluar su conocimiento en diferentes temas.
+![Captura de pantalla 2024-04-18 204117](https://github.com/AgustinErimbaue/Proyecto-Quiz/assets/118487992/f80dca15-67c9-4321-a792-dbd0a1e080d3)
+![Captura de pantalla 2024-04-18 204132](https://github.com/AgustinErimbaue/Proyecto-Quiz/assets/118487992/535f14f6-2892-4db0-9a56-be13becbadeb)
+![Captura de pantalla 2024-04-18 204254](https://github.com/AgustinErimbaue/Proyecto-Quiz/assets/118487992/5fe2c418-9b67-40f0-b47a-4a26708d25eb)
 
 ## Cómo usar
 
